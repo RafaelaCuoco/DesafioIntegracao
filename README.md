@@ -8,7 +8,7 @@
 <hr>
 <h2><strong>Tabela de Conteúdo </strong> </h2>
 <ol start="1">
-   <li><a href="#descrição-do-projeto" target="_blank" rel="nofollow">Descrição do Projeto </a></li>
+   <li><a href="#descri%C3%A7%C3%A3o-do-projeto--" target="_blank" rel="nofollow">Descrição do Projeto </a></li>
    <li><a href="#estrutura-do-projeto" target="_blank" rel="nofollow">Estrutura do Projeto </a></li>
    <li><a href="#pré-requisitos" target="_blank" rel="nofollow">Pré-requisitos </a></li>
    <li><a href="#configuração-inicial" target="_blank" rel="nofollow">Configuração Inicial </a></li>
