@@ -15,7 +15,6 @@
    <li><a href="#executando-o-projeto" target="_blank" rel="nofollow">Executando o Projeto </a></li>
    <li><a href="#migrações-do-banco-de-dados" target="_blank" rel="nofollow">Migrações do Banco de Dados </a></li>
    <li><a href="#endpoints-da-api" target="_blank" rel="nofollow">Endpoints da API </a></li>
-   <li><a href="#contribuição" target="_blank" rel="nofollow">Contribuição </a></li>
    <li><a href="#licença" target="_blank" rel="nofollow">Licença </a></li>
 </ol>
 <div class="my-2"></div>
