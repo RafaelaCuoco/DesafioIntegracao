@@ -1,7 +1,7 @@
 <div>
 <hr>
 <h1 data-spm-anchor-id="5aebb161.65e9fcb3.0.i48.70242a1anngFFs"><strong data-spm-anchor-id="5aebb161.65e9fcb3.0.i40.70242a1anngFFs">Order Integration API </strong> </h1>
-<p><button class="w-max-full w-fit"><img src="https://img.shields.io/badge/.NET-8.0-blue" alt=".NET" class="rounded-lg" draggable="false" data-cy="image"></button>  <button class="w-max-full w-fit"><img src="https://img.shields.io/badge/Entity_Framework_Core-8.x-green" alt="EntityFrameworkCore" class="rounded-lg" draggable="false" data-cy="image"></button>  <button class="w-max-full w-fit"><img src="https://img.shields.io/badge/AutoMapper-latest-orange" alt="AutoMapper" class="rounded-lg" draggable="false" data-cy="image"></button>  </p>
+<p><button class="w-max-full w-fit"><img src="https://img.shields.io/badge/.NET-8.0-blue" alt=".NET" class="rounded-lg" draggable="false" data-cy="image"></button>  <button class="w-max-full w-fit"><img src="https://img.shields.io/badge/Entity_Framework_Core-9.x-green" alt="EntityFrameworkCore" class="rounded-lg" draggable="false" data-cy="image"></button>  <button class="w-max-full w-fit"><img src="https://img.shields.io/badge/AutoMapper-latest-orange" alt="AutoMapper" class="rounded-lg" draggable="false" data-cy="image"></button>  </p>
 <div class="my-2"></div>
 <p>Este é um projeto de integração de pedidos que processa arquivos desnormalizados e os converte em uma estrutura normalizada. A aplicação é construída usando <strong>ASP.NET Core 8 </strong>, <strong>Entity Framework Core </strong> e <strong>SQL Server </strong>. </p>
 <div class="my-2"></div>
