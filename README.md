@@ -9,13 +9,13 @@
 <h2><strong>Tabela de Conteúdo </strong> </h2>
 <ol start="1">
    <li><a href="#descri%C3%A7%C3%A3o-do-projeto--" target="_blank" rel="nofollow">Descrição do Projeto </a></li>
-   <li><a href="#estrutura-do-projeto" target="_blank" rel="nofollow">Estrutura do Projeto </a></li>
-   <li><a href="#pré-requisitos" target="_blank" rel="nofollow">Pré-requisitos </a></li>
-   <li><a href="#configuração-inicial" target="_blank" rel="nofollow">Configuração Inicial </a></li>
-   <li><a href="#executando-o-projeto" target="_blank" rel="nofollow">Executando o Projeto </a></li>
-   <li><a href="#migrações-do-banco-de-dados" target="_blank" rel="nofollow">Migrações do Banco de Dados </a></li>
-   <li><a href="#endpoints-da-api" target="_blank" rel="nofollow">Endpoints da API </a></li>
-   <li><a href="#licença" target="_blank" rel="nofollow">Licença </a></li>
+   <li><a href="#estrutura-do-projeto--" target="_blank" rel="nofollow">Estrutura do Projeto </a></li>
+   <li><a href="#pr%C3%A9-requisitos--" target="_blank" rel="nofollow">Pré-requisitos </a></li>
+   <li><a href="#configura%C3%A7%C3%A3o-inicial--" target="_blank" rel="nofollow">Configuração Inicial </a></li>
+   <li><a href="#executando-o-projeto--" target="_blank" rel="nofollow">Executando o Projeto </a></li>
+   <li><a href="migra%C3%A7%C3%B5es-do-banco-de-dados--" target="_blank" rel="nofollow">Migrações do Banco de Dados </a></li>
+   <li><a href="#endpoints-da-api--" target="_blank" rel="nofollow">Endpoints da API </a></li>
+   <li><a href="#licen%C3%A7a--" target="_blank" rel="nofollow">Licença </a></li>
 </ol>
 <div class="my-2"></div>
 <hr>
