@@ -10,7 +10,9 @@ namespace OrderIntegration.Domain.Entities
     {
         public string ProductId { get; set; }
         public decimal Value { get; set; } 
-        public int OrderId { get; set; } 
+        public int OrderId { get; set; }
+
+        // Relacionamento com Order
         public Order Order { get; set; } 
     }
 }
