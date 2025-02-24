@@ -341,17 +341,6 @@ Use ferramentas como <a href="https://www.postman.com/" target="_blank" rel="nof
 </ul>
 <div class="my-2"></div>
 <hr>
-<h2><strong>Contribuição </strong> </h2>
-<div class="my-2"></div>
-<ol start="1">
-<li>Faça um fork do repositório.</li>
-<li>Crie uma branch para sua feature (<code class="codespan cursor-pointer">git checkout -b feature/nova-funcionalidade</code>).</li>
-<li>Commit suas mudanças (<code class="codespan cursor-pointer">git commit -m 'Adiciona nova funcionalidade'</code>).</li>
-<li>Envie sua branch (<code class="codespan cursor-pointer">git push origin feature/nova-funcionalidade</code>).</li>
-<li>Abra um Pull Request.</li>
-</ol>
-<div class="my-2"></div>
-<hr>
 <h2><strong>Licença </strong> </h2>
 <p>Este projeto está licenciado sob a <a href="LICENSE" target="_blank" rel="nofollow">MIT License </a>. </p>
 <div class="my-2"></div>
