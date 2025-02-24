@@ -18,7 +18,7 @@ namespace OrderIntegration.Core.Services
                 var userId = int.Parse(line.Substring(0, 10).TrimStart('0'));
                 var name = line.Substring(10, 45).Trim();
                 var orderId = int.Parse(line.Substring(55, 10).TrimStart('0'));
-                var productId = line.Substring(65, 10).TrimStart('0');
+                var productId = int.Parse(line.Substring(65, 10).TrimStart('0') == "" ? "0" : line.Substring(65, 10).TrimStart('0'));
                 var value = decimal.Parse(line.Substring(75, 18).Trim(), NumberStyles.AllowDecimalPoint, CultureInfo.InvariantCulture);
                 var date = DateTime.ParseExact(line.Substring(87, 8), "yyyyMMdd", CultureInfo.InvariantCulture);
 

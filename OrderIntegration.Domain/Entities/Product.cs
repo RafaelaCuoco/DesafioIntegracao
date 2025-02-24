@@ -8,7 +8,7 @@ namespace OrderIntegration.Domain.Entities
 {
     public class Product
     {
-        public string ProductId { get; set; }
+        public int ProductId { get; set; }
         public decimal Value { get; set; } 
         public int OrderId { get; set; }
 

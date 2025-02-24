@@ -8,7 +8,7 @@ namespace OrderIntegration.Core.Dtos
 {
     public class ProductDto
     {
-        public string ProductId { get; set; }
+        public int ProductId { get; set; }
         public decimal Value { get; set; }
     }
 }

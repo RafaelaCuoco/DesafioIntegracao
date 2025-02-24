@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using OrderIntegration.Infrastructure.Data;
+using AutoMapper; // Adicione esta linha para evitar ambiguidade
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -16,6 +17,9 @@ var connectionString = builder.Configuration.GetConnectionString("DefaultConnect
 
 // Registrar o DbContext com a string de conexão
 builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(connectionString));
+
+// Registrar o AutoMapper
+builder.Services.AddAutoMapper(typeof(OrderIntegration.Core.Mappings.AutoMapperProfile));
 
 var app = builder.Build();
 

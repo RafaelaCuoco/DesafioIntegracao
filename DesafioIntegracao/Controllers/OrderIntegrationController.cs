@@ -1,51 +1,73 @@
 using Microsoft.AspNetCore.Mvc;
-using OrderIntegration.Core.Dtos;
 using OrderIntegration.Core.Services;
 using System.IO;
+using AutoMapper;
+using OrderIntegration.Core.Dtos;
 
-namespace DesafioIntegracao.Controllers;
-
-[ApiController]
-[Route("api/[controller]")]
-public class OrdersController : ControllerBase
+namespace OrderIntegration.API.Controllers
 {
-    private readonly FileProcessorService _fileProcessor;
-
-    public OrdersController(FileProcessorService fileProcessor)
+    [ApiController]
+    [Route("api/[controller]")]
+    public class OrdersController : ControllerBase
     {
-        _fileProcessor = fileProcessor;
-    }
+        private readonly FileProcessorService _fileProcessor;
+        private readonly IMapper _mapper;
 
-    [HttpPost("upload")]
-    public IActionResult UploadFile(IFormFile file)
-    {
-        if (file == null || file.Length == 0)
-            return BadRequest("Arquivo inválido.");
-
-        var filePath = Path.GetTempFileName();
-        using (var stream = new FileStream(filePath, FileMode.Create))
+        public OrdersController(FileProcessorService fileProcessor, IMapper mapper)
         {
-            file.CopyTo(stream);
+            _fileProcessor = fileProcessor;
+            _mapper = mapper;
         }
 
-        var users = _fileProcessor.ProcessFile(filePath);
-        var response = users.Select(static u => new OrderResponseDto
+        [HttpPost("upload")]
+        public IActionResult UploadFile(IFormFile file)
         {
-            UserId = u.UserId,
-            Name = u.Name,
-            Orders = u.Orders.Select(o => new OrderDto
-            {
-                OrderId = o.OrderId,
-                Date = o.Date.ToString("yyyy-MM-dd"),
-                Total = o.Total.ToString("F2"),
-                Products = o.Products.Select(p => new ProductDto
-                {
-                    ProductId = p.ProductId,
-                    Value = Convert.ToDecimal(p.Value.ToString("F2"))
-                }).ToList()
-            }).ToList()
-        }).ToList();
+            if (file == null || file.Length == 0)
+                return BadRequest("Arquivo inválido.");
 
-        return Ok(response);
+            var filePath = Path.GetTempFileName();
+            using (var stream = new FileStream(filePath, FileMode.Create))
+            {
+                file.CopyTo(stream);
+            }
+
+            // Processar o arquivo e obter as entidades
+            var users = _fileProcessor.ProcessFile(filePath);
+
+            // Mapear entidades para DTOs usando AutoMapper
+            var response = _mapper.Map<List<OrderResponseDto>>(users);
+
+            // Verificar produtos sem ProductId
+            var warnings = new List<string>();
+            foreach (var user in response)
+            {
+                foreach (var order in user.Orders)
+                {
+                    var invalidProducts = order.Products.Where(p => p.ProductId == 0).ToList();
+                    if (invalidProducts.Any())
+                    {
+                        foreach (var product in invalidProducts)
+                        {
+                            warnings.Add($"Produto sem ID encontrado no pedido {order.OrderId}.");
+                        }
+                    }
+                }
+            }
+
+            // Criar a resposta personalizada
+            var apiResponse = new ApiResponse
+            {
+                Success = warnings.Count == 0,
+                Message = warnings.Count > 0 ? "Alguns produtos estão sem ID." : "Processamento concluído com sucesso.",
+                Data = response,
+                Warnings = warnings
+            };
+
+            // Retornar a resposta
+            if (warnings.Any())
+                return StatusCode(206, apiResponse); // Código 206 para advertências
+            else
+                return Ok(apiResponse); // Código 200 para sucesso total
+        }
     }
 }
