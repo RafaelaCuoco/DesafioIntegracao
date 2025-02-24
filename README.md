@@ -20,7 +20,7 @@
 <div class="my-2"></div>
 <hr>
 <h2><strong>Descrição do Projeto </strong> </h2>
-<p>O objetivo deste projeto é criar uma API RESTful que: </p>
+<p>O objetivo deste projeto é criar uma API REST que: </p>
 <ul>
    <li>Receba um arquivo desnormalizado contendo informações de usuários, pedidos e produtos.</li>
    <li>Processe o arquivo e normalize os dados em uma estrutura relacional.</li>
