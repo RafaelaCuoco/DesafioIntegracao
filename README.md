@@ -89,8 +89,8 @@
                            </div>
                         </div>
                         <div spellcheck="false" autocorrect="off" autocapitalize="off" writingsuggestions="false" translate="no" contenteditable="false" style="tab-size: 4;" class="cm-content" role="textbox" aria-multiline="true" data-language="shell" aria-autocomplete="list">
-                           <div class="cm-activeLine cm-line"><span class="ͼs">git</span> clone https://github.com/seu-usuario/OrderIntegration.git</div>
-                           <div class="cm-line"><span class="ͼs">cd</span> OrderIntegration</div>
+                           <div class="cm-activeLine cm-line"><pre><code class="bash">git clone https://github.com/RafaelaCuoco/OrderIntegration.git
+cd OrderIntegration</code></pre></div>
                         </div>
                         <div class="cm-layer cm-layer-above cm-cursorLayer" aria-hidden="true" style="z-index: 150; animation-duration: 1200ms;">
                            <div class="cm-cursor cm-cursor-primary" style="left: 36.7969px; top: 5px; height: 19px;"></div>
@@ -111,9 +111,6 @@
       <div>
          <div class="relative my-2 flex flex-col rounded-lg" dir="ltr">
             <div class="text-text-300 absolute pl-4 py-1.5 text-xs font-medium dark:text-white">bash</div>
-            <div class="sticky top-8 mb-1 py-1 pr-2.5 flex items-center justify-end z-10 text-xs text-black dark:text-white">
-               <div class="flex items-center gap-0.5 translate-y-[1px]"><button class="copy-code-button bg-none border-none bg-gray-50 hover:bg-gray-100 dark:bg-gray-850 dark:hover:bg-gray-800 transition rounded-md px-1.5 py-0.5">Copiar</button></div>
-            </div>
             <div class="language-bash rounded-t-lg -mt-8 rounded-b-lg overflow-hidden">
                <div class="pt-7 bg-gray-50 dark:bg-gray-850"></div>
                <div id="code-textarea-2cd6b716-1e75-48cf-bde8-c84149c78d7c-29-1-1" class="h-full w-full code-textarea ">
@@ -122,7 +119,7 @@
                      <div tabindex="-1" class="cm-scroller">
                         <div class="cm-gutters" aria-hidden="true" style="min-height: 30.3906px; position: sticky;">
                            <div spellcheck="false" autocorrect="off" autocapitalize="off" writingsuggestions="false" translate="no" contenteditable="false" style="tab-size: 4;" class="cm-content" role="textbox" aria-multiline="true" data-language="shell" aria-autocomplete="list">
-                              <div class="cm-activeLine cm-line">dotnet restore</div>
+                              <div class="cm-activeLine cm-line"><pre><code class="bash">dotnet restore</code></pre></div>
                            </div>
                            <div class="cm-layer cm-layer-above cm-cursorLayer" aria-hidden="true" style="z-index: 150; animation-duration: 1200ms;">
                               <div class="cm-cursor cm-cursor-primary" style="left: 36.7969px; top: 5px; height: 19px;"></div>
@@ -153,9 +150,20 @@
    <div class="cm-gutters" aria-hidden="true" style="min-height: 75.1719px; position: sticky;">
    </div>
    <div spellcheck="false" autocorrect="off" autocapitalize="off" writingsuggestions="false" translate="no" contenteditable="false" style="tab-size: 4;" class="cm-content" role="textbox" aria-multiline="true" data-language="json">
-   <div class="cm-activeLine cm-line"><span class="ͼ13">"ConnectionStrings"</span><span class="ͼt">:</span>
+
    <div class="cm-line"></div>
-      <code class="codespan cursor-pointer">DefaultConnection:Server=SEU_SERVIDOR;Database=OrderIntegrationDb;User Id=SEU_USUARIO;Password=SUA_SENHA;TrustServerCertificate=True;</code>
+      <div class="cm-activeLine cm-line"><pre><code class="json">{
+  "ConnectionStrings": {
+    "DefaultConnection": "Server=SEU_SERVIDOR;Database=OrderIntegrationDb;User Id=SEU_USUARIO;Password=SUA_SENHA;TrustServerCertificate=True;"
+  },
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft.AspNetCore": "Warning"
+    }
+  },
+  "AllowedHosts": "*"
+}</code></pre></div>
    </div>
    <div class="cm-layer cm-layer-above cm-cursorLayer" aria-hidden="true" style="z-index: 150; animation-duration: 1200ms;">
    <div class="cm-cursor cm-cursor-primary" style="left: 37px; top: 5px; height: 19px;"></div>
@@ -172,6 +180,39 @@
    <blockquote>
    <p>Substitua <code class="codespan cursor-pointer">SEU_SERVIDOR</code>, <code class="codespan cursor-pointer">SEU_USUARIO</code> e <code class="codespan cursor-pointer">SUA_SENHA</code> pelas suas credenciais do SQL Server. </p>
    </blockquote>
+   </li>
+   <li>
+   <p><strong>Crie o banco de dados no SQL Server </strong>
+   Em seu SQL Server Management Studio, crie o banco vazio para que o Entity Framework possa popular os dados: 
+   </p>
+   <div class="my-2"></div>
+   <div>
+   <div class="relative my-2 flex flex-col rounded-lg" dir="ltr">
+   <div class="text-text-300 absolute pl-4 py-1.5 text-xs font-medium dark:text-white">SQL</div>
+   <div class="language-json rounded-t-lg -mt-8 rounded-b-lg overflow-hidden">
+   <div class="pt-7 bg-gray-50 dark:bg-gray-850"></div>
+   <div id="code-textarea-2cd6b716-1e75-48cf-bde8-c84149c78d7c-29-2-2" class="h-full w-full code-textarea ">
+   <div class="cm-editor ͼ1 ͼ3 ͼ4 ͼo">
+   <div class="cm-announced" aria-live="polite"></div>
+   <div tabindex="-1" class="cm-scroller">
+   <div class="cm-gutters" aria-hidden="true" style="min-height: 75.1719px; position: sticky;">
+   </div>
+   <div spellcheck="false" autocorrect="off" autocapitalize="off" writingsuggestions="false" translate="no" contenteditable="false" style="tab-size: 4;" class="cm-content" role="textbox" aria-multiline="true" data-language="json">
+
+   <div class="cm-line"></div>
+      <div class="cm-activeLine cm-line"><pre><code class="SQL">CREATE DATABASE OrderIntegrationDb;</code></pre></div>
+   </div>
+   <div class="cm-layer cm-layer-above cm-cursorLayer" aria-hidden="true" style="z-index: 150; animation-duration: 1200ms;">
+   <div class="cm-cursor cm-cursor-primary" style="left: 37px; top: 5px; height: 19px;"></div>
+   </div>
+   <div class="cm-layer cm-selectionLayer" aria-hidden="true" style="z-index: -2;"></div>
+   </div>
+   </div>
+   </div>
+   </div>
+   <div id="plt-canvas-2cd6b716-1e75-48cf-bde8-c84149c78d7c-29-2-2" class="bg-[#202123] text-white max-w-full overflow-x-auto scrollbar-hidden"></div>
+   </div>
+   </div>
    </li>
 </ol>
 <div class="my-2"></div>
@@ -194,7 +235,7 @@ Use o seguinte comando para iniciar a API:
 <div class="cm-gutters" aria-hidden="true" style="min-height: 30.3906px; position: sticky;">
 </div>
 <div spellcheck="false" autocorrect="off" autocapitalize="off" writingsuggestions="false" translate="no" contenteditable="false" style="tab-size: 4;" class="cm-content" role="textbox" aria-multiline="true" data-language="shell" aria-autocomplete="list">
-<div class="cm-activeLine cm-line">dotnet run <span class="ͼq">--project</span> OrderIntegration.API</div>
+<div class="cm-activeLine cm-line"><pre><code class="bash">dotnet run --project OrderIntegration.API.csproj</code></pre></div>
 </div>
 <div class="cm-layer cm-layer-above cm-cursorLayer" aria-hidden="true" style="z-index: 150; animation-duration: 1200ms;">
 <div class="cm-cursor cm-cursor-primary" style="left: 36.7969px; top: 5px; height: 19px;"></div>
@@ -219,11 +260,11 @@ Use ferramentas como <a href="https://www.postman.com/" target="_blank" rel="nof
 <div class="my-2"></div>
 <hr>
 <h2><strong>Migrações do Banco de Dados </strong> </h2>
-<p>Se você precisar adicionar ou atualizar migrações, siga os passos abaixo: </p>
+<p>O projeto ja contem uma migration personalizada para popular o banco, siga os passos abaixo: </p>
 <div class="my-2"></div>
 <ol start="1">
 <li>
-<p><strong>Adicionar uma nova migração </strong> </p>
+<p><strong>Update-database da migration </strong> </p>
 <div>
 <div class="relative my-2 flex flex-col rounded-lg" dir="ltr">
 <div class="text-text-300 absolute pl-4 py-1.5 text-xs font-medium dark:text-white">bash</div>
@@ -236,7 +277,7 @@ Use ferramentas como <a href="https://www.postman.com/" target="_blank" rel="nof
 <div class="cm-gutters" aria-hidden="true" style="min-height: 30.3906px; position: sticky;">
 </div>
 <div spellcheck="false" autocorrect="off" autocapitalize="off" writingsuggestions="false" translate="no" contenteditable="false" style="tab-size: 4;" class="cm-content" role="textbox" aria-multiline="true" data-language="shell" aria-autocomplete="list">
-<div class="cm-activeLine cm-line">dotnet ef migrations add NomeDaMigracao <span class="ͼq">--project</span> OrderIntegration.Infrastructure <span class="ͼq">--startup-project</span> OrderIntegration.API</div>
+   <div class="cm-activeLine cm-line"><pre><code class="bash">dotnet ef update-database</code></pre></div>
 </div>
 <div class="cm-layer cm-layer-above cm-cursorLayer" aria-hidden="true" style="z-index: 150; animation-duration: 1200ms;">
 <div class="cm-cursor cm-cursor-primary" style="left: 36.7969px; top: 5px; height: 19px;"></div>
@@ -247,34 +288,6 @@ Use ferramentas como <a href="https://www.postman.com/" target="_blank" rel="nof
 </div>
 </div>
 <div id="plt-canvas-2cd6b716-1e75-48cf-bde8-c84149c78d7c-39-0-1" class="bg-[#202123] text-white max-w-full overflow-x-auto scrollbar-hidden"></div>
-</div>
-</div>
-</li>
-<li>
-<p><strong>Aplicar a migração ao banco de dados </strong> </p>
-<div>
-<div class="relative my-2 flex flex-col rounded-lg" dir="ltr">
-<div class="text-text-300 absolute pl-4 py-1.5 text-xs font-medium dark:text-white">bash</div>
-<div class="language-bash rounded-t-lg -mt-8 rounded-b-lg overflow-hidden">
-<div class="pt-7 bg-gray-50 dark:bg-gray-850"></div>
-<div id="code-textarea-2cd6b716-1e75-48cf-bde8-c84149c78d7c-39-1-1" class="h-full w-full code-textarea ">
-<div class="cm-editor ͼ1 ͼ3 ͼ4 ͼo">
-<div class="cm-announced" aria-live="polite"></div>
-<div tabindex="-1" class="cm-scroller">
-<div class="cm-gutters" aria-hidden="true" style="min-height: 30.3906px; position: sticky;">
-</div>
-<div spellcheck="false" autocorrect="off" autocapitalize="off" writingsuggestions="false" translate="no" contenteditable="false" style="tab-size: 4;" class="cm-content" role="textbox" aria-multiline="true" data-language="shell" aria-autocomplete="list">
-<div class="cm-activeLine cm-line">dotnet ef database update <span class="ͼq">--project</span> OrderIntegration.Infrastructure <span class="ͼq">--startup-project</span> OrderIntegration.API</div>
-</div>
-<div class="cm-layer cm-layer-above cm-cursorLayer" aria-hidden="true" style="z-index: 150; animation-duration: 1200ms;">
-<div class="cm-cursor cm-cursor-primary" style="left: 36.7969px; top: 5px; height: 19px;"></div>
-</div>
-<div class="cm-layer cm-selectionLayer" aria-hidden="true" style="z-index: -2;"></div>
-</div>
-</div>
-</div>
-</div>
-<div id="plt-canvas-2cd6b716-1e75-48cf-bde8-c84149c78d7c-39-1-1" class="bg-[#202123] text-white max-w-full overflow-x-auto scrollbar-hidden"></div>
 </div>
 </div>
 </li>
@@ -289,11 +302,19 @@ Use ferramentas como <a href="https://www.postman.com/" target="_blank" rel="nof
 <li><strong>Descrição </strong>: Processa um arquivo desnormalizado e armazena os dados no banco de dados.</li>
 <li>
 <strong>Exemplo de Requisição </strong>:
-<ul>
-<li><strong>Body </strong>: Envie um arquivo no formato multipart/form-data.</li>
+
+<strong>Body </strong>: Envie um arquivo no formato multipart/form-data.
+<div class="text-text-300 absolute pl-4 py-1.5 text-xs font-medium dark:text-white">Text</div>
+<div class="language-json rounded-t-lg -mt-8 rounded-b-lg overflow-hidden">
+<div class="pt-7 bg-gray-50 dark:bg-gray-850"></div>
+<div id="code-textarea-2cd6b716-1e75-48cf-bde8-c84149c78d7c-44-4-1" class="h-full w-full code-textarea ">
+<div class="cm-editor ͼ1 ͼ3 ͼ4 ͼo">
+<div class="cm-announced" aria-live="polite"></div>
+<div tabindex="-1" class="cm-scroller">
+<div class="cm-activeLine cm-line"><pre><code class="Text">0000000001                                Rafaela Cuoco00000001230000000123       96.4720250225</code></pre></div>
 </ul>
 </li>
-<li>
+<ul><li>
 <strong>Exemplo de Resposta </strong>:
 <div>
 <div class="relative my-2 flex flex-col rounded-lg" dir="ltr">
@@ -304,27 +325,30 @@ Use ferramentas como <a href="https://www.postman.com/" target="_blank" rel="nof
 <div class="cm-editor ͼ1 ͼ3 ͼ4 ͼo">
 <div class="cm-announced" aria-live="polite"></div>
 <div tabindex="-1" class="cm-scroller">
-<div spellcheck="false" autocorrect="off" autocapitalize="off" writingsuggestions="false" translate="no" contenteditable="false" style="tab-size: 4;" class="cm-content" role="textbox" aria-multiline="true" data-language="json">
-<div class="cm-activeLine cm-line"><span class="cm-matchingBracket">[</span></div>
-<div class="cm-line">  {</div>
-<div class="cm-line">    <span class="ͼq">"userId"</span><span class="ͼt">:</span> <span class="ͼu">1</span><span class="ͼt">,</span></div>
-<div class="cm-line">    <span class="ͼq">"name"</span><span class="ͼt">:</span> <span class="ͼ13">"Zarelli"</span><span class="ͼt">,</span></div>
-<div class="cm-line">    <span class="ͼq">"orders"</span><span class="ͼt">:</span> [</div>
-<div class="cm-line">      {</div>
-<div class="cm-line">        <span class="ͼq">"orderId"</span><span class="ͼt">:</span> <span class="ͼu">123</span><span class="ͼt">,</span></div>
-<div class="cm-line">        <span class="ͼq">"date"</span><span class="ͼt">:</span> <span class="ͼ13">"2021-12-01"</span><span class="ͼt">,</span></div>
-<div class="cm-line">        <span class="ͼq">"total"</span><span class="ͼt">:</span> <span class="ͼ13">"1836.7420210308"</span><span class="ͼt">,</span></div>
-<div class="cm-line">        <span class="ͼq">"products"</span><span class="ͼt">:</span> [</div>
-<div class="cm-line">          {</div>
-<div class="cm-line">            <span class="ͼq">"productId"</span><span class="ͼt">:</span> <span class="ͼu">111</span><span class="ͼt">,</span></div>
-<div class="cm-line">            <span class="ͼq">"value"</span><span class="ͼt">:</span> <span class="ͼ13">"1836.7420210308"</span></div>
-<div class="cm-line">          }</div>
-<div class="cm-line">        ]</div>
-<div class="cm-line">      }</div>
-<div class="cm-line">    ]</div>
-<div class="cm-line">  }</div>
-<div class="cm-line"><span class="cm-matchingBracket">]</span></div>
-</div>
+<div class="cm-activeLine cm-line"><pre><code class="SQL">{
+  "success": true,
+  "message": "Processamento concluído com sucesso.",
+  "data": [
+    {
+      "userId": 1,
+      "name": "Rafaela Cuoco",
+      "orders": [
+        {
+          "orderId": 123,
+          "total": "96.47",
+          "date": "2025-02-25",
+          "products": [
+            {
+              "productId": 123,
+              "value": "96.47"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "warnings": []
+}</code></pre></div>
 <div class="cm-layer cm-layer-above cm-cursorLayer" aria-hidden="true" style="z-index: 150; animation-duration: 1200ms;">
 <div class="cm-cursor cm-cursor-primary" style="left: 42.5938px; top: 5px; height: 19px;"></div>
 </div>
