@@ -6,11 +6,12 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace OrderIntegration.Infrastructure.Migrations
 {
     /// <inheritdoc />
-    public partial class PrimeiraMigration : Migration
+    public partial class FirstMigration : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
-        {
+        { 
+            // Criar tabelas ou outras operações no novo banco de dados
             migrationBuilder.CreateTable(
                 name: "Users",
                 columns: table => new
@@ -49,13 +50,15 @@ namespace OrderIntegration.Infrastructure.Migrations
                 name: "Products",
                 columns: table => new
                 {
-                    ProductId = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    ProductId = table.Column<int>(type: "int", nullable: false),
                     Value = table.Column<decimal>(type: "decimal(18,10)", precision: 18, scale: 10, nullable: false),
                     OrderId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Products", x => x.ProductId);
+                    table.PrimaryKey("PK_Products", x => x.Id);
                     table.ForeignKey(
                         name: "FK_Products_Orders_OrderId",
                         column: x => x.OrderId,
@@ -73,6 +76,44 @@ namespace OrderIntegration.Infrastructure.Migrations
                 name: "IX_Products_OrderId",
                 table: "Products",
                 column: "OrderId");
+
+            // Remover as chaves estrangeiras
+            migrationBuilder.DropForeignKey(
+                name: "FK_Orders_Users_UserId",
+                table: "Orders");
+
+            migrationBuilder.DropForeignKey(
+                name: "FK_Products_Orders_OrderId",
+                table: "Products");
+
+            // Remover as chaves primárias
+            migrationBuilder.DropPrimaryKey(
+                name: "PK_Users",
+                table: "Users");
+
+            migrationBuilder.DropPrimaryKey(
+                name: "PK_Orders",
+                table: "Orders");
+
+            // Remover as colunas existentes
+            migrationBuilder.DropColumn(
+                name: "UserId",
+                table: "Users");
+
+            migrationBuilder.DropColumn(
+                name: "OrderId",
+                table: "Orders");
+
+            // Adicionar novas colunas
+            migrationBuilder.AddColumn<int>(
+                name: "UserId",
+                table: "Users",
+                nullable: false);
+
+            migrationBuilder.AddColumn<int>(
+                name: "OrderId",
+                table: "Orders",
+                nullable: false);
         }
 
         /// <inheritdoc />

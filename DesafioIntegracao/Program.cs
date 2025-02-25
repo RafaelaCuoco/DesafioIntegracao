@@ -1,6 +1,8 @@
 using Microsoft.EntityFrameworkCore;
 using OrderIntegration.Infrastructure.Data;
-using AutoMapper; // Adicione esta linha para evitar ambiguidade
+using AutoMapper;
+using Swashbuckle.AspNetCore.SwaggerGen;
+using Microsoft.OpenApi.Models; 
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -11,6 +13,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+builder.Services.AddScoped<OrderIntegration.Domain.Interfaces.IUserRepository, OrderIntegration.Infrastructure.Repositories.UserRepository>();
 builder.Services.AddScoped<OrderIntegration.Core.Services.FileProcessorService>();
 
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
@@ -20,6 +23,19 @@ builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseSqlSer
 
 // Registrar o AutoMapper
 builder.Services.AddAutoMapper(typeof(OrderIntegration.Core.Mappings.AutoMapperProfile));
+
+builder.Services.AddSwaggerGen(c =>
+{
+    c.SwaggerDoc("v1", new OpenApiInfo
+    {
+        Title = "Order Integration API",
+        Version = "v1",
+        Description = "API para integração de pedidos."
+    });
+
+    // Adicionar descrições globais de respostas
+    c.OperationFilter<GlobalResponseDescriptions>();
+});
 
 var app = builder.Build();
 
@@ -35,3 +51,21 @@ app.UseAuthorization();
 app.MapControllers();
 
 app.Run();
+
+// Classe para adicionar descrições globais
+public class GlobalResponseDescriptions : IOperationFilter
+{
+    public void Apply(OpenApiOperation operation, OperationFilterContext context)
+    {
+        // Adicionar descrições globais de respostas
+        operation.Responses.TryAdd("206", new OpenApiResponse
+        {
+            Description = "Requisição retornou dados parciais."
+        });
+
+        operation.Responses.TryAdd("500", new OpenApiResponse
+        {
+            Description = "Erro interno no servidor."
+        });
+    }
+}

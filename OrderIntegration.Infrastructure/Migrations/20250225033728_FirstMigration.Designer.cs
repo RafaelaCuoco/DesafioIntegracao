@@ -12,8 +12,8 @@ using OrderIntegration.Infrastructure.Data;
 namespace OrderIntegration.Infrastructure.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20250224094451_PrimeiraMigration")]
-    partial class PrimeiraMigration
+    [Migration("20250225033728_FirstMigration")]
+    partial class FirstMigration
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -52,17 +52,23 @@ namespace OrderIntegration.Infrastructure.Migrations
 
             modelBuilder.Entity("OrderIntegration.Domain.Entities.Product", b =>
                 {
-                    b.Property<string>("ProductId")
-                        .HasColumnType("nvarchar(450)");
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<int>("OrderId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("ProductId")
                         .HasColumnType("int");
 
                     b.Property<decimal>("Value")
                         .HasPrecision(18, 10)
                         .HasColumnType("decimal(18,10)");
 
-                    b.HasKey("ProductId");
+                    b.HasKey("Id");
 
                     b.HasIndex("OrderId");
 

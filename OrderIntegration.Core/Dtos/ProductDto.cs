@@ -9,6 +9,6 @@ namespace OrderIntegration.Core.Dtos
     public class ProductDto
     {
         public int ProductId { get; set; }
-        public decimal Value { get; set; }
+        public string Value { get; set; }
     }
 }

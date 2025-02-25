@@ -3,6 +3,8 @@ using OrderIntegration.Core.Services;
 using System.IO;
 using AutoMapper;
 using OrderIntegration.Core.Dtos;
+using System.Security.Cryptography;
+using OrderIntegration.Domain.Entities;
 
 namespace OrderIntegration.API.Controllers
 {
@@ -35,22 +37,27 @@ namespace OrderIntegration.API.Controllers
             var users = _fileProcessor.ProcessFile(filePath);
 
             // Mapear entidades para DTOs usando AutoMapper
-            var response = _mapper.Map<List<OrderResponseDto>>(users);
+            var response = _mapper.Map<List<OrderResponseDto>>(users).OrderBy(u => u.UserId).ToList();
 
             // Verificar produtos sem ProductId
             var warnings = new List<string>();
+
             foreach (var user in response)
             {
+                List<OrderDto> prodok = new List<OrderDto>();
                 foreach (var order in user.Orders)
                 {
                     var invalidProducts = order.Products.Where(p => p.ProductId == 0).ToList();
                     if (invalidProducts.Any())
                     {
+                        warnings.Add($"Os seguintes produtos não tiveram o ID encontrado no pedido e não foram cadastrados no banco de dados nem retornados na listagem.");
                         foreach (var product in invalidProducts)
                         {
-                            warnings.Add($"Produto sem ID encontrado no pedido {order.OrderId}.");
+                            warnings.Add($"User {user.UserId} - {user.Name}. Pedido {order.OrderId}. Valor {order.Total}");
                         }
                     }
+                    order.Products = order.Products.Where(p => p.ProductId > 0).ToList();
+                    user.Orders = user.Orders.Where(u => u.Products.Count() > 0).ToList();
                 }
             }
 
@@ -60,7 +67,7 @@ namespace OrderIntegration.API.Controllers
                 Success = warnings.Count == 0,
                 Message = warnings.Count > 0 ? "Alguns produtos estão sem ID." : "Processamento concluído com sucesso.",
                 Data = response,
-                Warnings = warnings
+                Warnings = warnings.Distinct().ToList()
             };
 
             // Retornar a resposta

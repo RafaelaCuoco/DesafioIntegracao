@@ -17,6 +17,7 @@ namespace OrderIntegration.Domain.Interfaces
         /// <param name="userId">O ID do usuário.</param>
         /// <returns>O usuário encontrado ou null se não existir.</returns>
         User GetUserById(int userId);
+        void AddOrUpdateUser(User user);
 
         /// <summary>
         /// Adiciona um novo usuário ao repositório.
