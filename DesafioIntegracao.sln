@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.13.35818.85
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrderIntegration.API", "DesafioIntegracao\OrderIntegration.API.csproj", "{545A3FD9-D352-4B29-9527-1B0CAA27C1B8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrderIntegration.API", "OrderIntegration.API\OrderIntegration.API.csproj", "{545A3FD9-D352-4B29-9527-1B0CAA27C1B8}"
 	ProjectSection(ProjectDependencies) = postProject
 		{848A413E-43E3-F464-0E03-C904DDC9E241} = {848A413E-43E3-F464-0E03-C904DDC9E241}
 		{8FAF2118-901F-AD91-4AF4-1983F5D544AC} = {8FAF2118-901F-AD91-4AF4-1983F5D544AC}
