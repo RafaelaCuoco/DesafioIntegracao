@@ -1,0 +1,271 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/26.0.16 Chrome/132.0.6834.196 Electron/34.2.0 Safari/537.36" version="26.0.16">
+  <diagram id="codeviz-diagram" name="System Diagram">
+    <mxGraphModel dx="1434" dy="836" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="subGraph9" value="" style="html=1;whiteSpace=wrap;container=1;fillColor=#dae8fc;strokeColor=#6c8ebf;dashed=1;fillOpacity=20;strokeWidth=2;containerType=none;recursiveResize=0;movable=1;resizable=1;autosize=0;dropTarget=0" parent="1" vertex="1">
+          <mxGeometry x="54" y="202" width="798" height="2350" as="geometry" />
+        </mxCell>
+        <mxCell id="Database" value="" style="html=1;whiteSpace=wrap;container=1;fillColor=#dae8fc;strokeColor=#6c8ebf;dashed=1;fillOpacity=20;strokeWidth=2;containerType=none;recursiveResize=0;movable=1;resizable=1;autosize=0;dropTarget=0" parent="subGraph9" vertex="1">
+          <mxGeometry x="546" y="2125" width="240" height="220" as="geometry" />
+        </mxCell>
+        <mxCell id="SQL" value="SQL Server&lt;br&gt;Microsoft SQL" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5" parent="Database" vertex="1">
+          <mxGeometry x="40" y="120" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Database_label" value="Database" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;labelBackgroundColor=white;spacing=5" parent="subGraph9" vertex="1">
+          <mxGeometry x="578" y="2133" width="164" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="subGraph7" value="" style="html=1;whiteSpace=wrap;container=1;fillColor=#dae8fc;strokeColor=#6c8ebf;dashed=1;fillOpacity=20;strokeWidth=2;containerType=none;recursiveResize=0;movable=1;resizable=1;autosize=0;dropTarget=0" parent="subGraph9" vertex="1">
+          <mxGeometry x="196" y="1680" width="590" height="420" as="geometry" />
+        </mxCell>
+        <mxCell id="subGraph6" value="" style="html=1;whiteSpace=wrap;container=1;fillColor=#dae8fc;strokeColor=#6c8ebf;dashed=1;fillOpacity=20;strokeWidth=2;containerType=none;recursiveResize=0;movable=1;resizable=1;autosize=0;dropTarget=0" parent="subGraph7" vertex="1">
+          <mxGeometry x="50" y="90" width="380" height="320" as="geometry" />
+        </mxCell>
+        <mxCell id="DbContext" value="Application DbContext&lt;br&gt;EF Core" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5" parent="subGraph6" vertex="1">
+          <mxGeometry x="60" y="120" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="UserRepo" value="User Repository&lt;br&gt;EF Core" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5" parent="subGraph6" vertex="1">
+          <mxGeometry x="180" y="220" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Migrations" value="Database Migrations&lt;br&gt;EF Core" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5" parent="subGraph6" vertex="1">
+          <mxGeometry x="40" y="220" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="subGraph6_label" value="Infrastructure Components" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;labelBackgroundColor=white;spacing=5" parent="subGraph7" vertex="1">
+          <mxGeometry x="58" y="98" width="304" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="InfraContainer" value="Data Access&lt;br&gt;Entity Framework Core" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5" parent="subGraph7" vertex="1">
+          <mxGeometry x="400" y="232.5" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="subGraph7_label" value="Infrastructure Layer" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;labelBackgroundColor=white;spacing=5" parent="subGraph9" vertex="1">
+          <mxGeometry x="228" y="1688" width="514" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="subGraph5" value="" style="html=1;whiteSpace=wrap;container=1;fillColor=#dae8fc;strokeColor=#6c8ebf;dashed=1;fillOpacity=20;strokeWidth=2;containerType=none;recursiveResize=0;movable=1;resizable=1;autosize=0;dropTarget=0" parent="subGraph9" vertex="1">
+          <mxGeometry x="336" y="1028" width="450" height="620" as="geometry" />
+        </mxCell>
+        <mxCell id="subGraph4" value="" style="html=1;whiteSpace=wrap;container=1;fillColor=#dae8fc;strokeColor=#6c8ebf;dashed=1;fillOpacity=20;strokeWidth=2;containerType=none;recursiveResize=0;movable=1;resizable=1;autosize=0;dropTarget=0" parent="subGraph5" vertex="1">
+          <mxGeometry x="50" y="80" width="240" height="520" as="geometry" />
+        </mxCell>
+        <mxCell id="UserEntity" value="User Entity&lt;br&gt;C#" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5" parent="subGraph4" vertex="1">
+          <mxGeometry x="40" y="220" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="OrderEntity" value="Order Entity&lt;br&gt;C#" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5" parent="subGraph4" vertex="1">
+          <mxGeometry x="40" y="320" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ProductEntity" value="Product Entity&lt;br&gt;C#" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5" parent="subGraph4" vertex="1">
+          <mxGeometry x="40" y="420" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="IUserRepo" value="User Repository Interface&lt;br&gt;C#" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5" parent="subGraph4" vertex="1">
+          <mxGeometry x="40" y="120" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="subGraph4_label" value="Domain Components" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;labelBackgroundColor=white;spacing=5" parent="subGraph5" vertex="1">
+          <mxGeometry x="58" y="103" width="164" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="DomainContainer" value="Domain Model&lt;br&gt;.NET Core" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5" parent="subGraph5" vertex="1">
+          <mxGeometry x="260" y="332.5" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="subGraph5_label" value="Domain Layer" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;labelBackgroundColor=white;spacing=5" parent="subGraph9" vertex="1">
+          <mxGeometry x="368" y="1038" width="374" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="subGraph3" value="" style="html=1;whiteSpace=wrap;container=1;fillColor=#dae8fc;strokeColor=#6c8ebf;dashed=1;fillOpacity=20;strokeWidth=2;containerType=none;recursiveResize=0;movable=1;resizable=1;autosize=0;dropTarget=0" parent="subGraph9" vertex="1">
+          <mxGeometry x="196" y="578" width="590" height="420" as="geometry" />
+        </mxCell>
+        <mxCell id="subGraph2" value="" style="html=1;whiteSpace=wrap;container=1;fillColor=#dae8fc;strokeColor=#6c8ebf;dashed=1;fillOpacity=20;strokeWidth=2;containerType=none;recursiveResize=0;movable=1;resizable=1;autosize=0;dropTarget=0" parent="subGraph3" vertex="1">
+          <mxGeometry x="50" y="95" width="380" height="320" as="geometry" />
+        </mxCell>
+        <mxCell id="FileProcessor" value="File Processor Service&lt;br&gt;C#" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5" parent="subGraph2" vertex="1">
+          <mxGeometry x="180" y="120" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="AutoMapper" value="Object Mapper&lt;br&gt;AutoMapper" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5" parent="subGraph2" vertex="1">
+          <mxGeometry x="40" y="120" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="DTOModels" value="DTO Models&lt;br&gt;C#" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5" parent="subGraph2" vertex="1">
+          <mxGeometry x="60" y="220" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="subGraph2_label" value="Core Components" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;labelBackgroundColor=white;spacing=5" parent="subGraph3" vertex="1">
+          <mxGeometry x="58" y="103" width="304" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="CoreContainer" value="Business Logic&lt;br&gt;.NET Core" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5" parent="subGraph3" vertex="1">
+          <mxGeometry x="400" y="235" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="subGraph3_label" value="Core Layer" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;labelBackgroundColor=white;spacing=5" parent="subGraph9" vertex="1">
+          <mxGeometry x="228" y="578" width="514" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="subGraph1" value="" style="html=1;whiteSpace=wrap;container=1;fillColor=#dae8fc;strokeColor=#6c8ebf;dashed=1;fillOpacity=20;strokeWidth=2;containerType=none;recursiveResize=0;movable=1;resizable=1;autosize=0;dropTarget=0" parent="subGraph9" vertex="1">
+          <mxGeometry x="60" y="95" width="580" height="435" as="geometry" />
+        </mxCell>
+        <mxCell id="subGraph0" value="" style="html=1;whiteSpace=wrap;container=1;fillColor=#dae8fc;strokeColor=#6c8ebf;dashed=1;fillOpacity=20;strokeWidth=2;containerType=none;recursiveResize=0;movable=1;resizable=1;autosize=0;dropTarget=0" parent="subGraph1" vertex="1">
+          <mxGeometry x="50" y="195" width="520" height="220" as="geometry" />
+        </mxCell>
+        <mxCell id="OrderController" value="Orders Controller&lt;br&gt;ASP.NET Controller" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5" parent="subGraph0" vertex="1">
+          <mxGeometry x="320" y="120" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="SwaggerUI" value="Swagger UI&lt;br&gt;Swashbuckle" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5" parent="subGraph0" vertex="1">
+          <mxGeometry x="180" y="120" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="GlobalResponses" value="Global Response Handler&lt;br&gt;OpenAPI" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5" parent="subGraph0" vertex="1">
+          <mxGeometry x="40" y="120" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="subGraph0_label" value="API Components" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;labelBackgroundColor=white;spacing=5" parent="subGraph1" vertex="1">
+          <mxGeometry x="58" y="203" width="444" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="APIContainer" value="Order Integration API&lt;br&gt;ASP.NET Core" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5" parent="subGraph1" vertex="1">
+          <mxGeometry x="110" y="120" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="subGraph1_label" value="API Layer" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;labelBackgroundColor=white;spacing=5" parent="subGraph9" vertex="1">
+          <mxGeometry x="68" y="103" width="504" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="subGraph9_label" value="Order Integration System" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;labelBackgroundColor=white;spacing=5" parent="1" vertex="1">
+          <mxGeometry x="62" y="210" width="722" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="Client" value="Client" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5" parent="1" vertex="1">
+          <mxGeometry x="162" y="12" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-L_Client_APIContainer_0" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#808080;strokeWidth=2;jumpStyle=arc;jumpSize=10;spacing=15;labelBackgroundColor=white;labelBorderColor=none" parent="1" source="Client" target="APIContainer" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-L_Client_APIContainer_0_label" value="Uploads files (HTTP POST)" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="edge-L_Client_APIContainer_0" vertex="1" connectable="0">
+          <mxGeometry x="-0.2" y="10" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge-L_APIContainer_CoreContainer_1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#808080;strokeWidth=2;jumpStyle=arc;jumpSize=10;spacing=15;labelBackgroundColor=white;labelBorderColor=none" parent="1" source="APIContainer" target="CoreContainer" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-L_APIContainer_CoreContainer_1_label" value="Uses" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="edge-L_APIContainer_CoreContainer_1" vertex="1" connectable="0">
+          <mxGeometry x="-0.2" y="10" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge-L_OrderController_FileProcessor_2" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#808080;strokeWidth=2;jumpStyle=arc;jumpSize=10;spacing=15;labelBackgroundColor=white;labelBorderColor=none" parent="1" source="OrderController" target="FileProcessor" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-L_OrderController_FileProcessor_2_label" value="Processes uploads" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="edge-L_OrderController_FileProcessor_2" vertex="1" connectable="0">
+          <mxGeometry x="-0.2" y="10" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge-L_OrderController_AutoMapper_3" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#808080;strokeWidth=2;jumpStyle=arc;jumpSize=10;spacing=15;labelBackgroundColor=white;labelBorderColor=none" parent="1" source="OrderController" target="AutoMapper" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-L_OrderController_AutoMapper_3_label" value="Maps objects" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="edge-L_OrderController_AutoMapper_3" vertex="1" connectable="0">
+          <mxGeometry x="-0.2" y="10" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge-L_APIContainer_SwaggerUI_4" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#808080;strokeWidth=2;jumpStyle=arc;jumpSize=10;spacing=15;labelBackgroundColor=white;labelBorderColor=none" parent="1" source="APIContainer" target="SwaggerUI" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-L_APIContainer_SwaggerUI_4_label" value="Configures" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="edge-L_APIContainer_SwaggerUI_4" vertex="1" connectable="0">
+          <mxGeometry x="-0.2" y="10" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge-L_APIContainer_GlobalResponses_5" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#808080;strokeWidth=2;jumpStyle=arc;jumpSize=10;spacing=15;labelBackgroundColor=white;labelBorderColor=none" parent="1" source="APIContainer" target="GlobalResponses" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-L_APIContainer_GlobalResponses_5_label" value="Uses" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="edge-L_APIContainer_GlobalResponses_5" vertex="1" connectable="0">
+          <mxGeometry x="-0.2" y="10" relative="1" as="geometry">
+            <mxPoint x="-27" y="-5" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge-L_FileProcessor_IUserRepo_6" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#808080;strokeWidth=2;jumpStyle=arc;jumpSize=10;spacing=15;labelBackgroundColor=white;labelBorderColor=none" parent="1" source="FileProcessor" target="IUserRepo" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-L_FileProcessor_IUserRepo_6_label" value="Uses" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="edge-L_FileProcessor_IUserRepo_6" vertex="1" connectable="0">
+          <mxGeometry x="-0.2" y="10" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge-L_FileProcessor_DTOModels_7" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#808080;strokeWidth=2;jumpStyle=arc;jumpSize=10;spacing=15;labelBackgroundColor=white;labelBorderColor=none" parent="1" source="FileProcessor" target="DTOModels" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-L_FileProcessor_DTOModels_7_label" value="Creates" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="edge-L_FileProcessor_DTOModels_7" vertex="1" connectable="0">
+          <mxGeometry x="-0.2" y="10" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge-L_AutoMapper_DTOModels_8" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#808080;strokeWidth=2;jumpStyle=arc;jumpSize=10;spacing=15;labelBackgroundColor=white;labelBorderColor=none" parent="1" source="AutoMapper" target="DTOModels" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-L_AutoMapper_DTOModels_8_label" value="Maps to/from" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="edge-L_AutoMapper_DTOModels_8" vertex="1" connectable="0">
+          <mxGeometry x="-0.2" y="10" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge-L_CoreContainer_DomainContainer_9" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#808080;strokeWidth=2;jumpStyle=arc;jumpSize=10;spacing=15;labelBackgroundColor=white;labelBorderColor=none" parent="1" source="CoreContainer" target="DomainContainer" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-L_CoreContainer_DomainContainer_9_label" value="Uses" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="edge-L_CoreContainer_DomainContainer_9" vertex="1" connectable="0">
+          <mxGeometry x="-0.2" y="10" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge-L_UserEntity_OrderEntity_10" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#808080;strokeWidth=2;jumpStyle=arc;jumpSize=10;spacing=15;labelBackgroundColor=white;labelBorderColor=none" parent="1" source="UserEntity" target="OrderEntity" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-L_UserEntity_OrderEntity_10_label" value="Has many" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="edge-L_UserEntity_OrderEntity_10" vertex="1" connectable="0">
+          <mxGeometry x="-0.2" y="10" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge-L_OrderEntity_ProductEntity_11" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#808080;strokeWidth=2;jumpStyle=arc;jumpSize=10;spacing=15;labelBackgroundColor=white;labelBorderColor=none" parent="1" source="OrderEntity" target="ProductEntity" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-L_OrderEntity_ProductEntity_11_label" value="Has many" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="edge-L_OrderEntity_ProductEntity_11" vertex="1" connectable="0">
+          <mxGeometry x="-0.2" y="10" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge-L_IUserRepo_UserEntity_12" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#808080;strokeWidth=2;jumpStyle=arc;jumpSize=10;spacing=15;labelBackgroundColor=white;labelBorderColor=none" parent="1" source="IUserRepo" target="UserEntity" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-L_IUserRepo_UserEntity_12_label" value="Manages" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="edge-L_IUserRepo_UserEntity_12" vertex="1" connectable="0">
+          <mxGeometry x="-0.2" y="10" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge-L_DomainContainer_InfraContainer_13" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#808080;strokeWidth=2;jumpStyle=arc;jumpSize=10;spacing=15;labelBackgroundColor=white;labelBorderColor=none" parent="1" source="DomainContainer" target="InfraContainer" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-L_DomainContainer_InfraContainer_13_label" value="Implemented by" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="edge-L_DomainContainer_InfraContainer_13" vertex="1" connectable="0">
+          <mxGeometry x="-0.2" y="10" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge-L_UserRepo_IUserRepo_14" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#808080;strokeWidth=2;jumpStyle=arc;jumpSize=10;spacing=15;labelBackgroundColor=white;labelBorderColor=none" parent="1" source="UserRepo" target="IUserRepo" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-L_UserRepo_IUserRepo_14_label" value="Implements" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="edge-L_UserRepo_IUserRepo_14" vertex="1" connectable="0">
+          <mxGeometry x="-0.2" y="10" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge-L_DbContext_UserRepo_15" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#808080;strokeWidth=2;jumpStyle=arc;jumpSize=10;spacing=15;labelBackgroundColor=white;labelBorderColor=none" parent="1" source="DbContext" target="UserRepo" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-L_DbContext_UserRepo_15_label" value="Manages" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="edge-L_DbContext_UserRepo_15" vertex="1" connectable="0">
+          <mxGeometry x="-0.2" y="10" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge-L_DbContext_Migrations_16" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#808080;strokeWidth=2;jumpStyle=arc;jumpSize=10;spacing=15;labelBackgroundColor=white;labelBorderColor=none" parent="1" source="DbContext" target="Migrations" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-L_DbContext_Migrations_16_label" value="Uses" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="edge-L_DbContext_Migrations_16" vertex="1" connectable="0">
+          <mxGeometry x="-0.2" y="10" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge-L_InfraContainer_SQL_17" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#808080;strokeWidth=2;jumpStyle=arc;jumpSize=10;spacing=15;labelBackgroundColor=white;labelBorderColor=none" parent="1" source="InfraContainer" target="SQL" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-L_InfraContainer_SQL_17_label" value="Persists to" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="edge-L_InfraContainer_SQL_17" vertex="1" connectable="0">
+          <mxGeometry x="-0.2" y="10" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
